@@ -22,7 +22,7 @@ open {{ project_snake | capitalize }}
 let test_hello_with_name name () =
   let greeting = Utils.greet name in
   let expected = "Hello " ^ name ^ "!" in
-  check string "same string" greeting expected
+  check string "same string" expected greeting
 
 let suite =
   [ "can greet Tom", `Quick, test_hello_with_name "Tom"
